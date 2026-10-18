@@ -148,7 +148,7 @@ export const projects: Project[] = [
       { src: "/projects/fanta-kerry/03-print-sheet.jpg", full: true },
       { src: "/projects/fanta-kerry/04-mango-orange.jpg" },
       { src: "/projects/fanta-kerry/05-mango.jpg" },
-      { src: "/projects/fanta-kerry/06-screen.jpg", full: true },
+      { src: "/projects/fanta-kerry/06-print-roll.jpg", full: true },
     ],
   },
   {
