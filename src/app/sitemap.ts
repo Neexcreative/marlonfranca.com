@@ -20,7 +20,7 @@ const existsInPublic = (src: string) => existsSync(join(process.cwd(), 'public',
 export default function sitemap(): MetadataRoute.Sitemap {
   // Project covers/stills help Google Images index the work
   const images = projects
-    .flatMap((p) => [p.cover, p.poster, ...(p.images ?? [])])
+    .flatMap((p) => [p.cover, p.poster, ...(p.images ?? []).map((i) => (typeof i === 'string' ? i : i.src))])
     .filter(isImage)
     .filter(existsInPublic)
     .map((src) => `${site.url}${src}`)

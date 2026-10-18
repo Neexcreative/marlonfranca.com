@@ -37,7 +37,11 @@ const ProjectModal = ({ project, next, onClose, onNext }: ProjectModalProps) => 
   }, [project.slug])
 
   const gallery = project.images?.length
-    ? project.images.map((src, i) => ({ src, size: i % 3 === 2 ? 'full' : 'half' }))
+    ? project.images.map((img, i) =>
+        typeof img === 'string'
+          ? { src: img, size: i % 3 === 2 ? 'full' : 'half' }
+          : { src: img.src, size: img.full ? 'full' : 'half' }
+      )
     : placeholderGallery.map((size) => ({ src: undefined, size }))
 
   const meta = [

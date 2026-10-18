@@ -32,7 +32,7 @@ const ProjectCard = ({ project, onOpen }: ProjectCardProps) => (
     </motion.div>
 
     {/* Legibility gradients over media */}
-    <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/45 via-transparent to-black/60" />
+    <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/45 via-transparent via-40% to-black/80" />
 
     {/* Service label */}
     <span className="absolute left-5 top-4 md:left-6 md:top-5 text-sm">{project.category}</span>

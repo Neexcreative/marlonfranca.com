@@ -35,8 +35,10 @@ export type Project = {
   cover?: string;
   /** Still image shown before the cover video loads */
   poster?: string;
-  /** Gallery inside the popup — images and videos can be mixed */
-  images?: string[];
+  /** Gallery inside the popup. Images and videos can be mixed.
+   *  A plain path follows the half / half / full pattern; use { src, full: true }
+   *  to force a full-width item, or { src } for half width. */
+  images?: (string | { src: string; full?: boolean })[];
 };
 
 const lorem = [
@@ -90,15 +92,27 @@ export const projects: Project[] = [
     tone: "#d6d3c4",
   },
   {
-    slug: "verde-skincare",
-    title: "Verde Skincare",
-    client: "Verde Labs",
+    slug: "gym-coffee",
+    title: "Gym+Coffee Collection Launch",
+    client: "Self-initiated concept",
     year: 2025,
     category: "3D Design",
-    services: ["3D Modelling", "Animation", "Rendering"],
-    summary: "Animated 3D product visuals for a skincare launch.",
-    description: lorem,
-    tone: "#cbd3c3",
+    services: ["Spatial Design", "3D Modelling & Rendering", "Campaign Graphics"],
+    summary: "A 3D brand activation concept for a new Gym+Coffee collection launch.",
+    description: [
+      "A self-initiated concept exploring how a new Gym+Coffee collection launch could live as a physical space. The brief I set myself: a modern environment where fans and brand enthusiasts can meet, connect over coffee and pre-order the new collection on site.",
+      "The layout pairs a lounge and coffee bar with open seating and chilled drinks displays, framed by backlit lightbox walls carrying the campaign. A central counter with point-of-sale screens handles pre-sales, while large-format graphics such as Athleisure to Love and Form Meets Function guide visitors through the space.",
+      "I designed the whole project: spatial layout, 3D modelling, materials, lighting and rendering in Blender, plus the campaign artwork and graphic panels in Photoshop.",
+      "Self-initiated portfolio concept. Not commissioned by or affiliated with Gym+Coffee or Debenhams.",
+    ],
+    tone: "#2a2d31",
+    cover: "/projects/gym-coffee/cover.mp4",
+    images: [
+      { src: "/projects/gym-coffee/01-overview.jpg", full: true },
+      { src: "/projects/gym-coffee/02-coffee-bar.jpg" },
+      { src: "/projects/gym-coffee/03-counter.jpg" },
+      { src: "/projects/gym-coffee/04-campaign-panels.jpg", full: true },
+    ],
   },
   {
     slug: "oak-and-iron",
