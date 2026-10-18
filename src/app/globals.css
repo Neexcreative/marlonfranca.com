@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* Light editorial palette — swap values once the visual reference is chosen */
+:root {
+  --paper: #f3f1ec;
+  --paper-2: #e9e6df;
+  --ink: #111110;
+  --muted: #6f6c66;
+  --line: #d9d5cc;
+  --night: #0a0a0a;
+  --accent: #e63329;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-night: var(--night);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-main), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
