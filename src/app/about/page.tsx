@@ -5,7 +5,7 @@ import Media from '@/components/Media'
 import ContactSection from '@/components/sections/ContactSection'
 import JsonLd from '@/components/JsonLd'
 import { aboutGraph } from '@/lib/structured-data'
-import { disciplines, site } from '@/data/site'
+import { site } from '@/data/site'
 
 const title = 'About & Contact'
 const description = `About ${site.name}, a ${site.city}-based designer working across brand strategy, websites, 3D, photo & video, large print and multimedia. Get in touch.`
@@ -38,6 +38,19 @@ const experience = [
 
 const clients = ['Client One', 'Client Two', 'Client Three', 'Client Four', 'Client Five', 'Client Six', 'Client Seven', 'Client Eight']
 
+const coreAreas = [
+  'Visual Design',
+  'Brand Design',
+  'Digital Design',
+  'Motion Graphics',
+  'Web Design',
+  'Presentation Design',
+  '3D Visualisation',
+  'Figma',
+  'Adobe Creative Cloud',
+  'AI-assisted Workflows',
+]
+
 export default function AboutPage() {
   return (
     <>
@@ -66,43 +79,34 @@ export default function AboutPage() {
           <div className="md:col-span-6 md:col-start-7 md:pt-24 space-y-6">
             <AnimateIn delay={0.1}>
               <p className="text-2xl md:text-3xl font-medium tracking-[-0.01em] leading-snug">
-                I&apos;m Marlon França, a designer based in Dublin working across brand identity, web, motion and print.
+                I&apos;m Marlon França, a multidisciplinary digital designer based in Dublin, working across brand,
+                motion, web and visual systems.
               </p>
             </AnimateIn>
             <AnimateIn delay={0.2}>
               <p className="text-lg leading-relaxed text-muted">
-                Placeholder bio: a few lines about your background, how you got into design and what drives
-                your work. Mention the kind of clients and projects you enjoy most.
+                With 6+ years of experience, I turn briefs into clear visual directions and production-ready work:
+                campaigns, visual identities, websites, branded presentations, social content, corporate events,
+                motion graphics and 3D environments. Creative thinking meets hands-on delivery, with a strong eye for
+                layout, typography, storytelling and final execution.
               </p>
             </AnimateIn>
             <AnimateIn delay={0.3}>
               <p className="text-lg leading-relaxed text-muted">
-                A second paragraph about process: how you approach a brief, collaborate with clients and turn
-                ideas into complete visual systems.
+                Today I&apos;m growing further into digital, brand, motion and product-minded design, ideally as part
+                of larger remote or remote-friendly creative teams.
               </p>
             </AnimateIn>
+            <AnimateIn delay={0.4}>
+              <ul className="flex flex-wrap gap-2 pt-2" aria-label="Core areas">
+                {coreAreas.map((a) => (
+                  <li key={a} className="rounded-full border border-line px-3 py-1.5 text-xs uppercase tracking-[0.12em]">
+                    {a}
+                  </li>
+                ))}
+              </ul>
+            </AnimateIn>
           </div>
-        </div>
-      </section>
-
-      {/* Disciplines */}
-      <section className="px-6 md:px-12 pb-24 md:pb-32 lg:pb-40">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
-          <AnimateIn className="md:col-span-3">
-            <p className="text-xs uppercase tracking-[0.15em] text-muted">What I do</p>
-          </AnimateIn>
-          <ul className="md:col-span-9">
-            {disciplines.map((d, i) => (
-              <li key={d} className="border-t border-line">
-                <AnimateIn delay={i * 0.05} className="group flex items-baseline justify-between py-5 md:py-6">
-                  <span className="text-3xl md:text-5xl font-medium tracking-[-0.02em] transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-3">
-                    {d}
-                  </span>
-                  <span className="text-xs text-muted tabular-nums">{String(i + 1).padStart(2, '0')}</span>
-                </AnimateIn>
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
 
