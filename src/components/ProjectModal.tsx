@@ -99,7 +99,7 @@ const ProjectModal = ({ project, next, onClose, onNext }: ProjectModalProps) => 
         {/* Sticky top bar */}
         <div className="sticky top-0 z-10 flex items-center justify-between px-6 md:px-10 py-4 bg-paper/85 backdrop-blur-md border-b border-line">
           <span className="text-xs uppercase tracking-[0.15em] text-muted">
-            {project.category} — {project.year}
+            {project.category} · {project.year}
           </span>
           <button
             ref={closeRef}
@@ -177,7 +177,7 @@ const ProjectModal = ({ project, next, onClose, onNext }: ProjectModalProps) => 
               >
                 <Media
                   src={g.src}
-                  alt={`${project.title} — image ${i + 1}`}
+                  alt={`${project.title}, image ${i + 1}`}
                   tone={project.tone}
                   label={`Image ${String(i + 1).padStart(2, '0')}`}
                   className={`rounded-2xl ${g.size === 'full' ? 'aspect-[16/9]' : 'aspect-[4/5]'}`}

@@ -20,13 +20,13 @@ const sans = Inter_Tight({
 const gaId = process.env.NEXT_PUBLIC_GA_ID;
 const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
 
-const defaultTitle = `${site.name} — ${site.jobTitle} in ${site.city}`;
+const defaultTitle = `${site.name} | ${site.jobTitle} in ${site.city}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
     default: defaultTitle,
-    template: `%s — ${site.name}`,
+    template: `%s | ${site.name}`,
   },
   description: site.description,
   applicationName: site.name,

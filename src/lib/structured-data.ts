@@ -47,7 +47,7 @@ export const homeGraph = () => ({
   '@type': 'CollectionPage',
   '@id': `${site.url}/#work`,
   url: site.url,
-  name: `${site.name} — Selected Work`,
+  name: `${site.name} | Selected Work`,
   isPartOf: { '@id': websiteId },
   about: { '@id': personId },
   mainEntity: {

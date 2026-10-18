@@ -21,7 +21,7 @@ const HeroSection = () => {
     <section ref={ref} className="relative min-h-svh flex flex-col justify-end px-6 md:px-12 pt-32 pb-10 md:pb-14 overflow-hidden">
       <motion.div style={{ y, opacity }} className="max-w-7xl w-full mx-auto">
         <motion.div {...fade(0.3)} className="flex items-center justify-between mb-8 md:mb-12 text-xs uppercase tracking-[0.15em] text-muted">
-          <span>Portfolio — 2020/{site.year}</span>
+          <span>Portfolio 2020/{site.year}</span>
           <span className="hidden md:inline">{site.location}</span>
         </motion.div>
 
@@ -34,7 +34,7 @@ const HeroSection = () => {
 
         <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
           <motion.p {...fade(0.9)} className="md:col-span-5 md:col-start-6 text-lg md:text-xl leading-relaxed text-ink">
-            Designer working across brand identity, digital, motion and print —
+            Designer working across brand identity, digital, motion and print,
             building visual systems that feel considered and alive.
           </motion.p>
 

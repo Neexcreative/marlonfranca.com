@@ -26,7 +26,7 @@ const Navbar = () => {
         scrolled ? 'backdrop-blur-md bg-paper/75 border-b border-line' : 'bg-transparent border-b border-transparent'
       }`}
     >
-      <Link href="/" aria-label={`${site.name} — home`} className="whitespace-nowrap text-xs md:text-base font-medium tracking-[0.1em] md:tracking-[0.15em] uppercase">
+      <Link href="/" aria-label={`${site.name}, home`} className="whitespace-nowrap text-xs md:text-base font-medium tracking-[0.1em] md:tracking-[0.15em] uppercase">
         <span className="max-[400px]:hidden">{site.name}</span>
         <span className="hidden max-[400px]:inline" aria-hidden>MF</span>
       </Link>

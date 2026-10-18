@@ -41,7 +41,7 @@ export type Project = {
 
 const lorem = [
   "A short paragraph about the brief: who the client is, what problem they had and what the project needed to achieve.",
-  "Then the approach — the idea behind the work, key decisions on typography, colour and system, and how it was rolled out across touchpoints.",
+  "Then the approach: the idea behind the work, key decisions on typography, colour and system, and how it was rolled out across touchpoints.",
 ];
 
 export const projects: Project[] = [

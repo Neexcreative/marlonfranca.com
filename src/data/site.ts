@@ -8,7 +8,7 @@ export const site = {
   /** ~155 characters — used as the default meta description */
   description:
     "Marlon França is a Dublin-based designer working across brand strategy, websites, 3D design, photo & video production, large print and multimedia.",
-  email: "hello@marlonfranca.com",
+  email: "contact@marlonfranca.com",
   city: "Dublin",
   country: "Ireland",
   countryCode: "IE",
@@ -18,9 +18,9 @@ export const site = {
   updated: "2026-10-18",
   /** Replace with full profile URLs — bare domains are left out of structured data */
   socials: [
-    { label: "Instagram", href: "https://instagram.com/" },
-    { label: "LinkedIn", href: "https://linkedin.com/" },
-    { label: "Behance", href: "https://behance.net/" },
+    { label: "Instagram", href: "https://www.instagram.com/marloneex/" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/marlonfrancasilva/" },
+    { label: "Behance", href: "https://www.behance.net/neexcreative" },
   ],
   nav: [
     { label: "Work", href: "/#work" },

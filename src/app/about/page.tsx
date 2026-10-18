@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description,
   alternates: { canonical: '/about' },
   openGraph: {
-    title: `${title} — ${site.name}`,
+    title: `${title} | ${site.name}`,
     description,
     url: '/about',
     siteName: site.name,
@@ -24,16 +24,16 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${title} — ${site.name}`,
+    title: `${title} | ${site.name}`,
     description,
   },
 }
 
 // Placeholder content — replace with real bio, experience and clients
 const experience = [
-  { years: '2024 — Now', role: 'Founder & Creative Director', place: 'Neex Creative, Dublin' },
-  { years: '2021 — 2024', role: 'Senior Designer', place: 'Studio Name' },
-  { years: '2019 — 2021', role: 'Graphic Designer', place: 'Agency Name' },
+  { years: '2024 / Now', role: 'Founder & Creative Director', place: 'Neex Creative, Dublin' },
+  { years: '2021 / 2024', role: 'Senior Designer', place: 'Studio Name' },
+  { years: '2019 / 2021', role: 'Graphic Designer', place: 'Agency Name' },
 ]
 
 const clients = ['Client One', 'Client Two', 'Client Three', 'Client Four', 'Client Five', 'Client Six', 'Client Seven', 'Client Eight']
@@ -71,7 +71,7 @@ export default function AboutPage() {
             </AnimateIn>
             <AnimateIn delay={0.2}>
               <p className="text-lg leading-relaxed text-muted">
-                Placeholder bio — a few lines about your background, how you got into design and what drives
+                Placeholder bio: a few lines about your background, how you got into design and what drives
                 your work. Mention the kind of clients and projects you enjoy most.
               </p>
             </AnimateIn>

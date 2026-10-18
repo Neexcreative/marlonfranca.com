@@ -4,7 +4,7 @@ import { site, disciplines } from '@/data/site'
 // Social share image (Facebook, LinkedIn, WhatsApp, X…) — generated at build time.
 // To use a designed image instead, delete this file and drop an
 // `opengraph-image.jpg` (1200×630) in this folder.
-export const alt = `${site.name} — ${site.jobTitle}`
+export const alt = `${site.name} | ${site.jobTitle}`
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
