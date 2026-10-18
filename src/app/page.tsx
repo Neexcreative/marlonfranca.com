@@ -1,5 +1,6 @@
 import HeroSection from '@/components/sections/HeroSection'
 import ProjectsGrid from '@/components/sections/ProjectsGrid'
+import ToolsMarquee from '@/components/sections/ToolsMarquee'
 import JsonLd from '@/components/JsonLd'
 import { homeGraph } from '@/lib/structured-data'
 
@@ -9,6 +10,7 @@ export default function Home() {
       <JsonLd data={homeGraph()} />
       <HeroSection />
       <ProjectsGrid />
+      <ToolsMarquee />
     </>
   )
 }
