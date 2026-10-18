@@ -2,15 +2,14 @@
 import { motion } from 'framer-motion'
 import AnimateIn from '../AnimateIn'
 
-// Software I use. `logo` = SVG in /public/logos (Simple Icons, monochrome).
-// Brands without a public icon (Adobe, Microsoft, OpenAI) show the name only —
-// drop the official SVG in /public/logos and add `logo` to show it.
+// Software I use. `logo` = SVG in /public/logos. Logos render in greyscale
+// and show their own colours on hover; an entry without `logo` shows the name only.
 const tools: { name: string; logo?: string }[] = [
-  { name: 'Photoshop' },
-  { name: 'Illustrator' },
-  { name: 'InDesign' },
-  { name: 'Premiere Pro' },
-  { name: 'After Effects' },
+  { name: 'Photoshop', logo: '/logos/adobe.svg' },
+  { name: 'Illustrator', logo: '/logos/adobe.svg' },
+  { name: 'InDesign', logo: '/logos/adobe.svg' },
+  { name: 'Premiere Pro', logo: '/logos/adobe.svg' },
+  { name: 'After Effects', logo: '/logos/adobe.svg' },
   { name: 'Figma', logo: '/logos/figma.svg' },
   { name: 'Cinema 4D', logo: '/logos/cinema4d.svg' },
   { name: 'Blender', logo: '/logos/blender.svg' },
@@ -22,10 +21,10 @@ const tools: { name: string; logo?: string }[] = [
   { name: 'Next.js', logo: '/logos/nextdotjs.svg' },
   { name: 'Vercel', logo: '/logos/vercel.svg' },
   { name: 'GitHub', logo: '/logos/github.svg' },
-  { name: 'VS Code' },
+  { name: 'VS Code', logo: '/logos/vscode.svg' },
   { name: 'Claude', logo: '/logos/claude.svg' },
-  { name: 'OpenAI' },
-  { name: 'Microsoft 365' },
+  { name: 'OpenAI', logo: '/logos/openai.svg' },
+  { name: 'Microsoft 365', logo: '/logos/microsoft.svg' },
   { name: 'OBS Studio', logo: '/logos/obsstudio.svg' },
 ]
 
@@ -57,10 +56,10 @@ const ToolsMarquee = () => {
           transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
         >
           {row.map((t, i) => (
-            <span key={i} className="flex shrink-0 items-center gap-3 px-8 md:px-12 text-ink/70 transition-colors hover:text-ink">
+            <span key={i} className="group flex shrink-0 items-center gap-3 px-8 md:px-12 text-ink/70 transition-colors hover:text-ink">
               {t.logo && (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={t.logo} alt="" width={26} height={26} className="h-6 w-6 md:h-7 md:w-7 opacity-80" />
+                <img src={t.logo} alt="" width={26} height={26} className="h-6 w-6 md:h-7 md:w-7 object-contain grayscale opacity-70 transition duration-300 group-hover:grayscale-0 group-hover:opacity-100" />
               )}
               <span className="whitespace-nowrap text-lg md:text-2xl tracking-tight">{t.name}</span>
             </span>
