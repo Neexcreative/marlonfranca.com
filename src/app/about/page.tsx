@@ -3,6 +3,7 @@ import RevealText from '@/components/RevealText'
 import AnimateIn from '@/components/AnimateIn'
 import Media from '@/components/Media'
 import ContactSection from '@/components/sections/ContactSection'
+import CVPreview from '@/components/sections/CVPreview'
 import JsonLd from '@/components/JsonLd'
 import { aboutGraph } from '@/lib/structured-data'
 import { site } from '@/data/site'
@@ -29,14 +30,12 @@ export const metadata: Metadata = {
   },
 }
 
-// Placeholder content — replace with real bio, experience and clients
 const experience = [
   { years: '2026 / Now', role: 'Designer', place: 'WTS / Hall Print' },
   { years: '2019 / Now', role: 'Founder & Creative Director', place: 'Neex Creative, Dublin' },
   { years: '2021 / 2025', role: 'Graphic Designer', place: 'Conference Services' },
 ]
 
-const clients = ['Client One', 'Client Two', 'Client Three', 'Client Four', 'Client Five', 'Client Six', 'Client Seven', 'Client Eight']
 
 const coreAreas = [
   'Visual Design',
@@ -110,7 +109,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Experience + clients */}
+      {/* Experience + CV */}
       <section className="px-6 md:px-12 pb-24 md:pb-32 lg:pb-40">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-8">
           <div className="md:col-span-7">
@@ -131,16 +130,10 @@ export default function AboutPage() {
           </div>
           <div className="md:col-span-4 md:col-start-9">
             <AnimateIn>
-              <p className="text-xs uppercase tracking-[0.15em] text-muted mb-8">Selected clients</p>
+              <p className="text-xs uppercase tracking-[0.15em] text-muted mb-8">CV</p>
             </AnimateIn>
             <AnimateIn delay={0.1}>
-              <ul className="grid grid-cols-2 gap-x-6">
-                {clients.map((c) => (
-                  <li key={c} className="border-t border-line py-3 text-sm">
-                    {c}
-                  </li>
-                ))}
-              </ul>
+              <CVPreview />
             </AnimateIn>
           </div>
         </div>
