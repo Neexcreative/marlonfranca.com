@@ -74,7 +74,7 @@ export default function AboutPage() {
       <section className="px-6 md:px-12 pb-24 md:pb-32 lg:pb-40">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-6">
           <AnimateIn className="md:col-span-5">
-            <Media alt="Portrait of Marlon França" label="Portrait" tone="#d8d2c7" className="aspect-[4/5]" />
+            <Media src="/images/portrait.jpg" alt="Portrait of Marlon França" label="Portrait" tone="#d8d2c7" className="aspect-[4/5]" />
           </AnimateIn>
           <div className="md:col-span-6 md:col-start-7 md:pt-24 space-y-6">
             <AnimateIn delay={0.1}>
