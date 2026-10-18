@@ -3,11 +3,30 @@ import RevealText from '@/components/RevealText'
 import AnimateIn from '@/components/AnimateIn'
 import Media from '@/components/Media'
 import ContactSection from '@/components/sections/ContactSection'
-import { disciplines } from '@/data/site'
+import JsonLd from '@/components/JsonLd'
+import { aboutGraph } from '@/lib/structured-data'
+import { disciplines, site } from '@/data/site'
+
+const title = 'About & Contact'
+const description = `About ${site.name}, a ${site.city}-based designer working across brand strategy, websites, 3D, photo & video, large print and multimedia. Get in touch.`
 
 export const metadata: Metadata = {
-  title: 'About & Contact',
-  description: 'About Marlon França — designer working across brand, digital, motion and print. Get in touch.',
+  title,
+  description,
+  alternates: { canonical: '/about' },
+  openGraph: {
+    title: `${title} — ${site.name}`,
+    description,
+    url: '/about',
+    siteName: site.name,
+    locale: 'en_IE',
+    type: 'profile',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${title} — ${site.name}`,
+    description,
+  },
 }
 
 // Placeholder content — replace with real bio, experience and clients
@@ -22,6 +41,7 @@ const clients = ['Client One', 'Client Two', 'Client Three', 'Client Four', 'Cli
 export default function AboutPage() {
   return (
     <>
+      <JsonLd data={aboutGraph()} />
       {/* Intro */}
       <section className="px-6 md:px-12 pt-36 md:pt-48 pb-24 md:pb-32">
         <div className="max-w-7xl mx-auto">
