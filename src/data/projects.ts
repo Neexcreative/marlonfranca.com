@@ -31,6 +31,8 @@ export type Project = {
   description: string[];
   /** Placeholder tone used in the popup gallery until real media exists */
   tone: string;
+  /** Live link shown in the popup (e.g. a launched website) */
+  url?: string;
   /** Image or video path from /public — leave empty to show a placeholder */
   cover?: string;
   /** Still image shown before the cover video loads */
@@ -59,15 +61,29 @@ export const projects: Project[] = [
     tone: "#d8cfc0",
   },
   {
-    slug: "northline-studio",
-    title: "Northline Studio",
-    client: "Northline Architects",
+    slug: "estudio-inx",
+    title: "Estúdio IN-X",
+    client: "Estúdio IN-X, Curitiba (Brazil)",
     year: 2026,
     category: "Websites & Landing Pages",
-    services: ["Web Design", "Development"],
-    summary: "Portfolio website for an architecture practice.",
-    description: lorem,
-    tone: "#c9d0cc",
+    services: ["Web Design", "UI Refinement", "Responsive Build"],
+    summary: "Website for a new aerial imaging and drone survey studio in Curitiba, Brazil.",
+    description: [
+      "Estúdio IN-X is a new aerial solutions studio in Curitiba, Brazil, offering drone photography, construction monitoring, technical inspections, mapping and visual documentation for architecture, engineering and construction projects.",
+      "The founder came with an initial design direction. I refined it into a complete, minimalist interface: dark, precise and built around strong aerial imagery, with a clear service structure, a simple three-step process and a quote request form that makes getting in touch easy.",
+      "I designed the site in Figma and built it with an AI-assisted development workflow, delivering responsive pages for desktop and mobile, including a dedicated page for each service. Delivered through Neex Creative.",
+      "The site is live, with entirely positive feedback from the client.",
+    ],
+    tone: "#1a1a1a",
+    url: "https://www.estudioinx.com.br",
+    cover: "/projects/inx-studio/cover.jpg",
+    images: [
+      { src: "/projects/inx-studio/01-services.jpg", full: true },
+      { src: "/projects/inx-studio/02-mobile-home.jpg" },
+      { src: "/projects/inx-studio/03-mobile-services.jpg" },
+      { src: "/projects/inx-studio/04-about.jpg", full: true },
+      { src: "/projects/inx-studio/05-service-page.jpg", full: true },
+    ],
   },
   {
     slug: "atlas-festival",

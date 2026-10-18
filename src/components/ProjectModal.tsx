@@ -128,6 +128,16 @@ const ProjectModal = ({ project, next, onClose, onNext }: ProjectModalProps) => 
                   <dd className="mt-1 text-sm">{m.value}</dd>
                 </div>
               ))}
+              {project.url && (
+                <div className="border-t border-line pt-3">
+                  <dt className="text-xs uppercase tracking-[0.15em] text-muted">Website</dt>
+                  <dd className="mt-1 text-sm">
+                    <a href={project.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-line hover:decoration-ink transition-colors">
+                      Live site ↗
+                    </a>
+                  </dd>
+                </div>
+              )}
             </motion.dl>
             <motion.div custom={3} variants={item} className="md:col-span-7 md:col-start-6 space-y-6">
               {project.description.map((p, i) => (
