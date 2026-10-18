@@ -132,7 +132,7 @@ const ProjectModal = ({ project, next, onClose, onNext }: ProjectModalProps) => 
           </div>
 
           {/* Hero — morphs from the grid card */}
-          <motion.div layoutId={`media-${project.slug}`} className="overflow-hidden rounded-2xl bg-black" transition={{ duration: 0.8, ease: easeOut }}>
+          <motion.div layoutId={`media-${project.slug}`} className="overflow-hidden rounded-2xl bg-black dark:bg-[#1c1c1a]" transition={{ duration: 0.8, ease: easeOut }}>
             <Media
               src={project.cover}
               poster={project.poster}

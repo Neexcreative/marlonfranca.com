@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { site } from '@/data/site'
 import { easeOut } from './AnimateIn'
+import ThemeToggle from './ThemeToggle'
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false)
@@ -27,8 +28,8 @@ const Navbar = () => {
       }`}
     >
       <Link href="/" aria-label={`${site.name}, home`} className="whitespace-nowrap text-xs md:text-base font-medium tracking-[0.1em] md:tracking-[0.15em] uppercase">
-        <span className="max-[400px]:hidden">{site.name}</span>
-        <span className="hidden max-[400px]:inline" aria-hidden>MF</span>
+        <span className="max-[460px]:hidden">{site.name}</span>
+        <span className="hidden max-[460px]:inline" aria-hidden>MF</span>
       </Link>
 
       <ul className="flex items-center gap-4 md:gap-10">
@@ -50,6 +51,9 @@ const Navbar = () => {
             </li>
           )
         })}
+        <li className="flex">
+          <ThemeToggle />
+        </li>
       </ul>
     </motion.nav>
   )

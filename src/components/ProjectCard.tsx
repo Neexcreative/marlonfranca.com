@@ -16,7 +16,7 @@ const ProjectCard = ({ project, onOpen }: ProjectCardProps) => (
     aria-label={`Open project: ${project.title}`}
   >
     {/* Media — morphs into the popup hero */}
-    <motion.div layoutId={`media-${project.slug}`} className="absolute inset-0 overflow-hidden rounded-2xl bg-black">
+    <motion.div layoutId={`media-${project.slug}`} className="absolute inset-0 overflow-hidden rounded-2xl bg-black dark:bg-[#1c1c1a]">
       {project.cover && (
         <div className="h-full w-full transition-transform duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]">
           <Media

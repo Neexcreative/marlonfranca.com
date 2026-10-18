@@ -4,6 +4,9 @@ import AnimateIn from '../AnimateIn'
 
 // Software I use. `logo` = SVG in /public/logos. Logos render in greyscale
 // and show their own colours on hover; an entry without `logo` shows the name only.
+// Single-colour (black) logos are inverted to white in dark mode; coloured ones stay as-is.
+const colouredLogos = ['adobe', 'photoshop', 'illustrator', 'indesign', 'aftereffects', 'microsoft', 'vscode']
+const isColoured = (logo: string) => colouredLogos.some((name) => logo.endsWith(`/${name}.svg`))
 const tools: { name: string; logo?: string }[] = [
   { name: 'Photoshop', logo: '/logos/photoshop.svg' },
   { name: 'Illustrator', logo: '/logos/illustrator.svg' },
@@ -59,7 +62,7 @@ const ToolsMarquee = () => {
             <span key={i} className="group flex shrink-0 items-center gap-3 px-8 md:px-12 text-ink/70 transition-colors hover:text-ink">
               {t.logo && (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={t.logo} alt="" width={26} height={26} className="h-6 w-6 md:h-7 md:w-7 object-contain grayscale opacity-70 transition duration-300 group-hover:grayscale-0 group-hover:opacity-100" />
+                <img src={t.logo} alt="" width={26} height={26} className={`h-6 w-6 md:h-7 md:w-7 object-contain grayscale opacity-70 transition duration-300 group-hover:grayscale-0 group-hover:opacity-100 ${isColoured(t.logo) ? '' : 'dark:invert'}`} />
               )}
               <span className="whitespace-nowrap text-lg md:text-2xl tracking-tight">{t.name}</span>
             </span>

@@ -11,6 +11,20 @@
   --accent: #e63329;
 }
 
+/* Dark palette — set by the theme toggle via <html data-theme="dark"> */
+:root[data-theme="dark"] {
+  --paper: #0f0f0e;
+  --paper-2: #171715;
+  --ink: #f3f1ec;
+  --muted: #9a968e;
+  --line: #2a2925;
+  --night: #080807;
+  color-scheme: dark;
+}
+
+/* `dark:` utilities follow the toggle, not the OS setting */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 @theme inline {
   --color-paper: var(--paper);
   --color-paper-2: var(--paper-2);
@@ -30,6 +44,7 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--font-sans);
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 ::selection {
