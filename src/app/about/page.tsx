@@ -31,9 +31,9 @@ export const metadata: Metadata = {
 
 // Placeholder content — replace with real bio, experience and clients
 const experience = [
-  { years: '2024 / Now', role: 'Founder & Creative Director', place: 'Neex Creative, Dublin' },
-  { years: '2021 / 2024', role: 'Senior Designer', place: 'Studio Name' },
-  { years: '2019 / 2021', role: 'Graphic Designer', place: 'Agency Name' },
+  { years: '2026 / Now', role: 'Designer', place: 'WTS / Hall Print' },
+  { years: '2019 / Now', role: 'Founder & Creative Director', place: 'Neex Creative, Dublin' },
+  { years: '2021 / 2025', role: 'Graphic Designer', place: 'Conference Services' },
 ]
 
 const clients = ['Client One', 'Client Two', 'Client Three', 'Client Four', 'Client Five', 'Client Six', 'Client Seven', 'Client Eight']
