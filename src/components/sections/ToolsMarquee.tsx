@@ -5,11 +5,11 @@ import AnimateIn from '../AnimateIn'
 // Software I use. `logo` = SVG in /public/logos. Logos render in greyscale
 // and show their own colours on hover; an entry without `logo` shows the name only.
 const tools: { name: string; logo?: string }[] = [
-  { name: 'Photoshop', logo: '/logos/adobe.svg' },
-  { name: 'Illustrator', logo: '/logos/adobe.svg' },
-  { name: 'InDesign', logo: '/logos/adobe.svg' },
+  { name: 'Photoshop', logo: '/logos/photoshop.svg' },
+  { name: 'Illustrator', logo: '/logos/illustrator.svg' },
+  { name: 'InDesign', logo: '/logos/indesign.svg' },
   { name: 'Premiere Pro', logo: '/logos/adobe.svg' },
-  { name: 'After Effects', logo: '/logos/adobe.svg' },
+  { name: 'After Effects', logo: '/logos/aftereffects.svg' },
   { name: 'Figma', logo: '/logos/figma.svg' },
   { name: 'Cinema 4D', logo: '/logos/cinema4d.svg' },
   { name: 'Blender', logo: '/logos/blender.svg' },
