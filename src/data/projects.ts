@@ -70,19 +70,19 @@ export const projects: Project[] = [
     summary: "Website for a new aerial imaging and drone survey studio in Curitiba, Brazil.",
     description: [
       "Estúdio IN-X is a new aerial solutions studio in Curitiba, Brazil, offering drone photography, construction monitoring, technical inspections, mapping and visual documentation for architecture, engineering and construction projects.",
+      "The challenge: as a brand new business, Estúdio IN-X had no online presence, and its services are technical and easy to misunderstand. Clients in architecture, engineering, construction and law needed to understand quickly what each service delivers and trust the studio before asking for a quote. The solution: a site that explains every service in plain language on its own page, shows the work through aerial imagery and leads visitors straight to a simple quote request.",
       "The founder came with an initial design direction. I refined it into a complete, minimalist interface: dark, precise and built around strong aerial imagery, with a clear service structure, a simple three-step process and a quote request form that makes getting in touch easy.",
       "I designed the site in Figma and built it with an AI-assisted development workflow, delivering responsive pages for desktop and mobile, including a dedicated page for each service. Delivered through Neex Creative.",
       "The site is live, with entirely positive feedback from the client.",
     ],
     tone: "#1a1a1a",
     url: "https://www.estudioinx.com.br",
-    cover: "/projects/inx-studio/cover.jpg",
+    cover: "/projects/inx-studio/cover-laptop.jpg",
     images: [
-      { src: "/projects/inx-studio/01-services.jpg", full: true },
-      { src: "/projects/inx-studio/02-mobile-home.jpg" },
+      { src: "/projects/inx-studio/01-moodboard.jpg", full: true },
+      { src: "/projects/inx-studio/02-mobile-home-v2.jpg" },
       { src: "/projects/inx-studio/03-mobile-services.jpg" },
-      { src: "/projects/inx-studio/04-about.jpg", full: true },
-      { src: "/projects/inx-studio/05-service-page.jpg", full: true },
+      { src: "/projects/inx-studio/05-logo-variations.jpg", full: true },
     ],
   },
   {
@@ -106,6 +106,7 @@ export const projects: Project[] = [
     summary: "Brand launch and full van wrap fleet for a new Irish drainage company.",
     description: [
       "The Drain Team is a new drainage company launching in Ireland. The goal was to turn their vans into moving billboards, so the brand is instantly recognisable on the road and on every job site.",
+      "The challenge: a brand new company with no recognition, in a market where people usually call whoever they see or remember first. The vans are on the road every day, so they had to work as advertising as well as transport. The solution: a wrap that is bold, legible from a distance and impossible to miss, putting the brand, phone number and website up front with an illustration that explains the service in a second.",
       "Bold red panels carry the wordmark and contact details, while an illustrated system of blue pipes and flowing water wraps around each vehicle. It reads at a glance and tells people exactly what the company does.",
       "I handled the project end to end: brand and illustration in Illustrator with AI-assisted exploration, vehicle measurements, production files, large-format printing and lamination. Delivered through Neex Creative.",
       "Both vans are now on the road, with entirely positive feedback from the client.",
@@ -129,6 +130,7 @@ export const projects: Project[] = [
     summary: "A 3D brand activation concept for a new Gym+Coffee collection launch.",
     description: [
       "A self-initiated concept exploring how a new Gym+Coffee collection launch could live as a physical space. The brief I set myself: a modern environment where fans and brand enthusiasts can meet, connect over coffee and pre-order the new collection on site.",
+      "The challenge: collection launches usually happen online, which makes it hard to build a real connection with the community or let people see and feel the product before buying. The solution: a space that brings together the two sides of the brand, fitness and coffee culture, giving fans a reason to stay, meet and pre-order on the spot.",
       "The layout pairs a lounge and coffee bar with open seating and chilled drinks displays, framed by backlit lightbox walls carrying the campaign. A central counter with point-of-sale screens handles pre-sales, while large-format graphics such as Athleisure to Love and Form Meets Function guide visitors through the space.",
       "I designed the whole project: spatial layout, 3D modelling, materials, lighting and rendering in Blender, plus the campaign artwork and graphic panels in Photoshop.",
       "Self-initiated portfolio concept. Not commissioned by or affiliated with Gym+Coffee or Debenhams.",
@@ -152,6 +154,7 @@ export const projects: Project[] = [
     summary: "Special edition can labels for a Fanta Dirty Soda event release.",
     description: [
       "A limited run of custom can labels for a Fanta Dirty Soda special edition, produced for an event across four flavours, including Blueberry Toasted Pastry and Mango Sticky Rice.",
+      "The challenge: the client needed a short run of special edition cans for an event, which called for applied labels rather than printed cans. Each label had to fit the can perfectly and look like a finished product, not a sticker. The solution: adapting the artwork precisely to the can's dimensions, testing the wrap on real cans until the fit was clean, then producing and applying every label by hand.",
       "My role was taking the artwork through to production: adjusting the files for print, testing fit and wrap on the can, preparing the print sheets, then finishing and applying the labels by hand.",
       "Delivered through Hall Print Solutions for Kerry Group.",
     ],

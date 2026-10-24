@@ -170,6 +170,7 @@ Cada projeto:
 
 - **Vídeos 3D:** `.mp4` ou `.webm` em `cover` ou `images` tocam em loop, sem som, só quando estão visíveis, e ficam parados para quem pede menos movimento no sistema.
 - **Sem `cover`:** o card fica preto. **Sem `images`:** a galeria mostra placeholders.
+- **Trocar uma imagem:** use **sempre um nome de ficheiro novo** (ex.: `cover-v2.jpg`) e atualize o caminho em `projects.ts`. Com o mesmo nome, o Next.js, a Vercel e o navegador continuam a mostrar a versão antiga em cache, às vezes só no desktop ou só no mobile.
 - **Galeria do popup:** segue o padrão 2 meias (4:5), 1 inteira (16:9), 2 meias…
 - Como exportar vídeos (ffmpeg, peso, codec): [public/projects/README.md](public/projects/README.md).
 
