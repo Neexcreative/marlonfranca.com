@@ -3,7 +3,6 @@ import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import RevealText from '../RevealText'
 import { easeOut } from '../AnimateIn'
-import { site } from '@/data/site'
 
 const HeroSection = () => {
   const ref = useRef<HTMLElement>(null)
@@ -20,11 +19,6 @@ const HeroSection = () => {
   return (
     <section ref={ref} className="relative flex flex-col px-6 md:px-12 pt-28 md:pt-36 pb-10 md:pb-14 overflow-hidden">
       <motion.div style={{ y, opacity }} className="max-w-7xl w-full mx-auto">
-        <motion.div {...fade(0.3)} className="flex items-center justify-between mb-8 md:mb-12 text-xs uppercase tracking-[0.15em] text-muted">
-          <span>Portfolio 2020/{site.year}</span>
-          <span className="hidden md:inline">{site.location}</span>
-        </motion.div>
-
         <RevealText
           lines={['Marlon', 'França']}
           delay={0.35}
