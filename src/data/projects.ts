@@ -50,15 +50,29 @@ const lorem = [
 
 export const projects: Project[] = [
   {
-    slug: "halden-coffee",
-    title: "Halden Coffee",
-    client: "Halden Coffee Co.",
-    year: 2026,
+    slug: "revival-youth-conference",
+    title: "Revival Youth Conference",
+    client: "Self-initiated concept",
+    year: 2025,
     category: "Brand Strategy & Design",
-    services: ["Brand Strategy", "Visual Identity", "Packaging"],
-    summary: "Positioning and identity system for a specialty coffee roaster.",
-    description: lorem,
-    tone: "#d8cfc0",
+    services: ["Naming", "Brand Identity", "Art Direction", "Event Applications"],
+    summary: "Brand concept for a youth conference built to revive and reconnect a young audience.",
+    description: [
+      "A self-initiated brand concept for a youth conference, inspired by the youth conferences I have taken part in. The name Revival carries the core idea: reviving young people, bringing back their energy, faith and sense of belonging.",
+      "The challenge: youth events compete for attention with everything young people see online, and many conferences still look dated next to the brands this audience follows. The solution: an identity that speaks their visual language, with a vibrant purple, pink and blue gradient, glassmorphism layers, film grain and sparkles, and a bold condensed wordmark paired with a handwritten Youth script, so the event feels like something worth showing up for and sharing.",
+      "I created the whole project: naming, logo, art direction, campaign graphics and applications across save the date banners, social posts, the official poster, staff badges, lanyards and merchandise. Imagery was produced with AI image generation and finished in Photoshop and Illustrator.",
+      "Self-initiated portfolio concept. The event, location and dates are fictional.",
+    ],
+    tone: "#c9a7d8",
+    cover: "/projects/revival-youth-conference/cover-banner.jpg",
+    images: [
+      { src: "/projects/revival-youth-conference/01-save-the-date.jpg", full: true },
+      { src: "/projects/revival-youth-conference/02-logo.jpg" },
+      { src: "/projects/revival-youth-conference/03-staff-badge.jpg" },
+      { src: "/projects/revival-youth-conference/04-poster.jpg" },
+      { src: "/projects/revival-youth-conference/05-t-shirt.jpg" },
+      { src: "/projects/revival-youth-conference/06-workspace.jpg", full: true },
+    ],
   },
   {
     slug: "estudio-inx",
