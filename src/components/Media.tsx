@@ -12,13 +12,18 @@ interface MediaProps {
   className?: string
   sizes?: string
   priority?: boolean
+  /** Keep a native ratio (e.g. "3985/1001"), overriding any aspect class */
+  aspect?: string
 }
 
 export const isVideo = (src?: string) => !!src && /\.(mp4|webm)$/i.test(src)
 
 // Shows the real image or video when `src` exists, otherwise a toned placeholder
-const Media = ({ src, poster, alt, tone = '#dcd8d0', label, className = '', sizes = '100vw', priority }: MediaProps) => (
-  <div className={`relative overflow-hidden ${className}`} style={{ backgroundColor: tone }}>
+const Media = ({ src, poster, alt, tone = '#dcd8d0', label, className = '', sizes = '100vw', priority, aspect }: MediaProps) => (
+  <div
+    className={`relative overflow-hidden ${className}`}
+    style={{ backgroundColor: tone, ...(aspect && { aspectRatio: aspect }) }}
+  >
     {isVideo(src) ? (
       <LoopVideo src={src!} poster={poster} label={alt} />
     ) : src ? (

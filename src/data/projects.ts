@@ -35,12 +35,14 @@ export type Project = {
   url?: string;
   /** Image or video path from /public — leave empty to show a placeholder */
   cover?: string;
+  /** Keep the cover's native ratio in the popup (e.g. "3985/1001") instead of 2:1 */
+  coverAspect?: string;
   /** Still image shown before the cover video loads */
   poster?: string;
   /** Gallery inside the popup. Images and videos can be mixed.
    *  A plain path follows the half / half / full pattern; use { src, full: true }
    *  to force a full-width item, or { src } for half width. */
-  images?: (string | { src: string; full?: boolean })[];
+  images?: (string | { src: string; full?: boolean; aspect?: string })[];
 };
 
 const lorem = [
@@ -60,18 +62,19 @@ export const projects: Project[] = [
     description: [
       "A self-initiated brand concept for a youth conference, inspired by the youth conferences I have taken part in. The name Revival carries the core idea: reviving young people, bringing back their energy, faith and sense of belonging.",
       "The challenge: youth events compete for attention with everything young people see online, and many conferences still look dated next to the brands this audience follows. The solution: an identity that speaks their visual language, with a vibrant purple, pink and blue gradient, glassmorphism layers, film grain and sparkles, and a bold condensed wordmark paired with a handwritten Youth script, so the event feels like something worth showing up for and sharing.",
-      "I created the whole project: naming, logo, art direction, campaign graphics and applications across save the date banners, social posts, the official poster, staff badges, lanyards and merchandise. Imagery was produced with AI image generation and finished in Photoshop and Illustrator.",
+      "I created the whole project: naming, logo, art direction, campaign graphics and applications across save the date and line-up banners, social stories, the official poster, staff badges, lanyards and merchandise. Imagery was produced with AI image generation and finished in Photoshop and Illustrator.",
       "Self-initiated portfolio concept. The event, location and dates are fictional.",
     ],
     tone: "#c9a7d8",
-    cover: "/projects/revival-youth-conference/cover-banner.jpg",
+    cover: "/projects/revival-youth-conference/cover-banner.webp",
+    coverAspect: "2560/643",
     images: [
-      { src: "/projects/revival-youth-conference/01-save-the-date.jpg", full: true },
-      { src: "/projects/revival-youth-conference/02-logo.jpg" },
-      { src: "/projects/revival-youth-conference/03-staff-badge.jpg" },
-      { src: "/projects/revival-youth-conference/04-poster.jpg" },
-      { src: "/projects/revival-youth-conference/05-t-shirt.jpg" },
-      { src: "/projects/revival-youth-conference/06-workspace.jpg", full: true },
+      { src: "/projects/revival-youth-conference/01-line-up.webp", full: true, aspect: "2560/586" },
+      { src: "/projects/revival-youth-conference/02-mobile-story.webp" },
+      { src: "/projects/revival-youth-conference/03-staff-badge.webp" },
+      { src: "/projects/revival-youth-conference/04-poster.webp" },
+      { src: "/projects/revival-youth-conference/05-t-shirt.webp" },
+      { src: "/projects/revival-youth-conference/06-workspace.webp", full: true },
     ],
   },
   {

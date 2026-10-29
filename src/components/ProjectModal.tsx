@@ -39,10 +39,10 @@ const ProjectModal = ({ project, next, onClose, onNext }: ProjectModalProps) => 
   const gallery = project.images?.length
     ? project.images.map((img, i) =>
         typeof img === 'string'
-          ? { src: img, size: i % 3 === 2 ? 'full' : 'half' }
-          : { src: img.src, size: img.full ? 'full' : 'half' }
+          ? { src: img, size: i % 3 === 2 ? 'full' : 'half', aspect: undefined }
+          : { src: img.src, size: img.full ? 'full' : 'half', aspect: img.aspect }
       )
-    : placeholderGallery.map((size) => ({ src: undefined, size }))
+    : placeholderGallery.map((size) => ({ src: undefined, size, aspect: undefined }))
 
   const meta = [
     { label: 'Client', value: project.client },
@@ -114,6 +114,7 @@ const ProjectModal = ({ project, next, onClose, onNext }: ProjectModalProps) => 
               tone="#000"
               label="Cover"
               className="aspect-[16/10] md:aspect-[16/8] text-white"
+              aspect={project.coverAspect}
               sizes="100vw"
               priority
             />
@@ -165,6 +166,7 @@ const ProjectModal = ({ project, next, onClose, onNext }: ProjectModalProps) => 
                   tone={project.tone}
                   label={`Image ${String(i + 1).padStart(2, '0')}`}
                   className={`rounded-2xl ${g.size === 'full' ? 'aspect-[16/9]' : 'aspect-[4/5]'}`}
+                  aspect={g.aspect}
                   sizes={g.size === 'full' ? '100vw' : '50vw'}
                 />
               </motion.div>
