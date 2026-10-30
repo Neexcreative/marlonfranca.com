@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { site } from '@/data/site'
+import CookieSettingsButton from './CookieSettingsButton'
 
 const Footer = () => (
   <footer className="border-t border-[#1f1f1f] bg-night px-6 py-16 md:px-12 text-[#f5f5f0]">
@@ -58,7 +59,10 @@ const Footer = () => (
       <p className="text-[#8a8a85] text-xs tracking-[0.1em] uppercase">
         © {site.year} {site.name}. All rights reserved.
       </p>
-      <p className="text-[#8a8a85] text-xs">Designed &amp; built by {site.name}</p>
+      <div className="flex items-center gap-6 text-[#8a8a85] text-xs">
+        <CookieSettingsButton />
+        <p>Designed &amp; built by {site.name}</p>
+      </div>
     </div>
   </footer>
 )
