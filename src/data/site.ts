@@ -9,6 +9,8 @@ export const site = {
   description:
     "Marlon França is a Dublin-based designer working across brand strategy, websites, 3D design, photo & video production, large print and multimedia.",
   email: "contact@marlonfranca.com",
+  /** Google Analytics 4 measurement ID (public, not a secret) */
+  gaId: "G-M2TDZV6V1L",
   city: "Dublin",
   country: "Ireland",
   countryCode: "IE",

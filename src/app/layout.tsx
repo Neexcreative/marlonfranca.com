@@ -17,7 +17,9 @@ const sans = Inter_Tight({
 });
 
 // Set these in Vercel → Settings → Environment Variables (see SEO.md)
-const gaId = process.env.NEXT_PUBLIC_GA_ID;
+// GA4 measurement ID is public (it ships in every page), so it lives here as the default;
+// NEXT_PUBLIC_GA_ID in Vercel overrides it if set.
+const gaId = process.env.NEXT_PUBLIC_GA_ID || site.gaId;
 const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
 
 const defaultTitle = `${site.name} | ${site.jobTitle} in ${site.city}`;
