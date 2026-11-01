@@ -45,10 +45,10 @@ const ProjectModal = ({ project, next, onClose, onNext }: ProjectModalProps) => 
     : placeholderGallery.map((size) => ({ src: undefined, size, aspect: undefined }))
 
   const meta = [
-    { label: 'Client', value: project.client },
-    { label: 'Year', value: String(project.year) },
-    { label: 'Discipline', value: project.category },
-    { label: 'Services', value: project.services.join(', ') },
+    { label: 'Client', value: project.client, href: project.clientUrl },
+    { label: 'Year', value: String(project.year), href: undefined },
+    { label: 'Discipline', value: project.category, href: undefined },
+    { label: 'Services', value: project.services.join(', '), href: undefined },
   ]
 
   return (
@@ -126,7 +126,15 @@ const ProjectModal = ({ project, next, onClose, onNext }: ProjectModalProps) => 
               {meta.map((m) => (
                 <div key={m.label} className="border-t border-line pt-3">
                   <dt className="text-xs uppercase tracking-[0.15em] text-muted">{m.label}</dt>
-                  <dd className="mt-1 text-sm">{m.value}</dd>
+                  <dd className="mt-1 text-sm">
+                    {m.href ? (
+                      <a href={m.href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-line hover:decoration-ink transition-colors">
+                        {m.value} ↗
+                      </a>
+                    ) : (
+                      m.value
+                    )}
+                  </dd>
                 </div>
               ))}
               {project.url && (

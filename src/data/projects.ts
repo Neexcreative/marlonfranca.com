@@ -23,6 +23,8 @@ export type Project = {
   slug: string;
   title: string;
   client: string;
+  /** Optional link on the client name (e.g. their Instagram or website) */
+  clientUrl?: string;
   year: number;
   category: Category;
   services: string[];
@@ -214,14 +216,31 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "form-journal",
-    title: "Form Journal",
-    client: "Form Publishing",
-    year: 2024,
+    slug: "irlandapontocom",
+    title: "IrlandaPontoCom",
+    client: "IrlandaPontoCom, Dublin (Ireland)",
+    clientUrl: "https://www.instagram.com/irlandapontocom/",
+    year: 2023,
     category: "Multimedia Design",
-    services: ["Editorial", "Digital Publishing"],
-    summary: "Print and digital editions for an independent culture magazine.",
-    description: lorem,
-    tone: "#dccdc6",
+    services: ["Rebrand", "Logo & Visual Identity", "Seasonal Brand System", "Social Media Identity"],
+    summary: "Rebrand of an Instagram news brand for Brazilians in Ireland, which grew from 80k to 108k followers.",
+    description: [
+      "IrlandaPontoCom is an Instagram news brand that keeps thousands of Brazilians who live in, or plan to move to, Ireland informed every day about news, tips and life in Dublin and across the country.",
+      "The challenge: the page needed a rebrand that truly reflected the owner's vision for the project and built a stronger connection with its audience. The solution: an identity rooted in Irish symbolism, with the shamrock redrawn as a vibrant 3D line and the name set in a circle, a sign that the brand is always around and attentive to every story. Seasonal versions for Pride, Halloween, Pink October, Blue November and St. Patrick's Day keep the brand alive and close to the community all year round.",
+      "I led the brand design: moodboard, logo and its seasonal variations, colour and visual direction, and how the identity comes to life across the Instagram profile, the feed and out-of-home mockups.",
+      "In the two years after the rebrand, the account grew from 80,000 to over 108,000 followers.",
+    ],
+    tone: "#0f2a1a",
+    cover: "/projects/irlandapontocom/cover-bridge.webp",
+    coverAspect: "1400/771",
+    images: [
+      { src: "/projects/irlandapontocom/01-logo-dark.webp" },
+      { src: "/projects/irlandapontocom/02-instagram-109k.webp" },
+      { src: "/projects/irlandapontocom/03-seasonal-logos-white.webp", full: true, aspect: "1289/1000" },
+      { src: "/projects/irlandapontocom/04-moodboard.webp", full: true, aspect: "1249/941" },
+      { src: "/projects/irlandapontocom/05-billboard.webp" },
+      { src: "/projects/irlandapontocom/06-feed-mockup.webp" },
+      { src: "/projects/irlandapontocom/07-insights.webp", full: true },
+    ],
   },
 ];
