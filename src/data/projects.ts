@@ -39,8 +39,11 @@ export type Project = {
   cover?: string;
   /** Keep the cover's native ratio in the popup (e.g. "3985/1001") instead of 2:1 */
   coverAspect?: string;
-  /** Still image shown before the cover video loads */
+  /** Still image shown before the cover video loads; also the video's thumbnailUrl for Google */
   poster?: string;
+  /** When a video cover was first published on the site, ISO 8601 with time zone
+   *  (e.g. "2026-10-18T22:13:27+01:00"). Required for the VideoObject in structured data. */
+  coverUploadDate?: string;
   /** Gallery inside the popup. Images and videos can be mixed.
    *  A plain path follows the half / half / full pattern; use { src, full: true }
    *  to force a full-width item, or { src } for half width. */
@@ -156,6 +159,9 @@ export const projects: Project[] = [
     ],
     tone: "#2a2d31",
     cover: "/projects/gym-coffee/cover.mp4",
+    poster: "/projects/gym-coffee/cover-poster.jpg",
+    // First published with commit e0841a1
+    coverUploadDate: "2026-10-18T22:13:27+01:00",
     images: [
       { src: "/projects/gym-coffee/01-overview.jpg", full: true },
       { src: "/projects/gym-coffee/02-coffee-bar.jpg" },

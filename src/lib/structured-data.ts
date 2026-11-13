@@ -3,6 +3,8 @@
 import { site, profiles, disciplines } from '@/data/site'
 import { projects } from '@/data/projects'
 
+const isVideo = (src: string) => /\.(mp4|webm)$/i.test(src)
+
 const personId = `${site.url}/#person`
 const websiteId = `${site.url}/#website`
 
@@ -63,15 +65,19 @@ export const homeGraph = () => ({
         dateCreated: String(p.year),
         keywords: p.services.join(', '),
         creator: { '@id': personId },
-        ...(p.cover && !/\.(mp4|webm)$/i.test(p.cover) && { image: `${site.url}${p.cover}` }),
-        ...(p.cover && /\.(mp4|webm)$/i.test(p.cover) && {
+        ...(p.cover && !isVideo(p.cover) && { image: `${site.url}${p.cover}` }),
+        // Video covers: the poster frame doubles as the project image
+        ...(p.cover && isVideo(p.cover) && p.poster && { image: `${site.url}${p.poster}` }),
+        // Google requires name, thumbnailUrl and uploadDate (ISO 8601 with time zone),
+        // so a VideoObject is only emitted when the project provides all of them
+        ...(p.cover && isVideo(p.cover) && p.poster && p.coverUploadDate && {
           video: {
             '@type': 'VideoObject',
             name: p.title,
             description: p.summary,
             contentUrl: `${site.url}${p.cover}`,
-            ...(p.poster && { thumbnailUrl: `${site.url}${p.poster}` }),
-            uploadDate: `${p.year}-01-01`,
+            thumbnailUrl: `${site.url}${p.poster}`,
+            uploadDate: p.coverUploadDate,
           },
         }),
       },
